@@ -1,5 +1,5 @@
 package com.skilldistillery.cards;
 
-public class Player {
+public class Player extends Dealer{
 
 }
