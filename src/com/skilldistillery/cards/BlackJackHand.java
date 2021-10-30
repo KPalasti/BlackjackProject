@@ -25,13 +25,23 @@ public class BlackJackHand extends Hand {
 		}
 		if (value >= 22) {
 			System.out.println("BUST");
+			System.out.println();
 			return true;
 		}
 		return false;
 	}
-
+	
 	@Override
 	public int getHandValue() {
+		int value = 0;
+		for (Card card : cards) {
+			value += card.getValue();
+		}
+		System.out.println(cards);
+		System.out.println(value);
+		return value;
+	}
+	public int getHandValue2() {
 		int value = 0;
 		for (Card card : cards) {
 			value += card.getValue();

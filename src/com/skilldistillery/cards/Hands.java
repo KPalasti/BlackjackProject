@@ -29,25 +29,25 @@ public abstract class Hands {
 
 	}
 
-	public void addCardPlayer(List<Card> playerHand, int playerValue, Card c) {
-		playerHand.add(c);
-	}
+//	public void addCardPlayer(List<Card> playerHand, int playerValue, Card c) {
+//		playerHand.add(c);
+//	}
+//
+//	public void addCardDealer(List<Card> dealerHand, int dealerValue, Card d) {
+//		dealerHand.add(d);
+//
+//	}
 
-	public void addCardDealer(List<Card> dealerHand, int dealerValue, Card d) {
-		dealerHand.add(d);
-
-	}
-
-	public void showHands(List<Card> playerHand, int playerValue, List<Card> dealerHand, int dealerValue) {
-		for (Card card : playerHand) {
-			System.out.println(card);
-		}
-		System.out.println("Total player value: " + playerValue);
-		for (Card card2 : dealerHand) {
-			System.out.println(card2);
-		}
-		System.out.println("Total dealer value: " + dealerValue);
-	}
+//	public void showHands(List<Card> playerHand, int playerValue, List<Card> dealerHand, int dealerValue) {
+//		for (Card card : playerHand) {
+//			System.out.println(card);
+//		}
+//		System.out.println("Total player value: " + playerValue);
+//		for (Card card2 : dealerHand) {
+//			System.out.println(card2);
+//		}
+//		System.out.println("Total dealer value: " + dealerValue);
+//	}
 
 	public void halfDisplayDealer(List<Card> dealerHand, int dealerValue) {
 		System.out.println(dealerHand.get(1));
