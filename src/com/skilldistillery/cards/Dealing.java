@@ -5,6 +5,9 @@ import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
+//player
+//dealer
+
 public class Dealing {
 	
 	public static void main(String[] args) {
@@ -48,5 +51,11 @@ public class Dealing {
 			
 		}
 		System.out.println("Total value: "+value);
+	}
+	public int getHandValue(List<Card> hand, int value) {
+		for (Card card : hand) {
+			System.out.println(card);
+		}
+		return value;
 	}
 }
