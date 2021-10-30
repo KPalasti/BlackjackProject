@@ -56,12 +56,12 @@ public class BlackJackApp {
 				System.out.println();
 
 				// declare winner
-				if (bjh1.getHandValue2() > bjh2.getHandValue2() && bjh1.getHandValue2() <= 21) {
+				if ((bjh1.getHandValue2() > bjh2.getHandValue2() && bjh1.getHandValue2() <= 21) || (bjh1.getHandValue2()<=21 && bjh2.isBust())) {
 					System.out.println("Congratulations, you've won!");
 
 				} else if (bjh1.getHandValue2() == bjh2.getHandValue2()) {
 					System.out.println("Push");
-				} else {
+				} else if (bjh1.getHandValue2()< bjh2.getHandValue2() && !bjh2.isBust()){
 					System.out.println("You lose.");
 				}
 			} else {
@@ -71,7 +71,7 @@ public class BlackJackApp {
 
 		} else {
 			System.out.println("Your dealer flips his cards...");
-			System.out.println(bjh2.getHandValue2());
+			System.out.println(bjh2.getHandValue());
 			System.out.println("Looks like the house does always win.");
 		}
 
@@ -91,6 +91,9 @@ public class BlackJackApp {
 			break;
 
 		case 2:
+			while (bjh2.getHandValue2() < 17 && !bjh2.isBust() && !bjh2.isBlackJack() && stay == false) {
+				bjh2.addCard(d.dealCard());
+			}
 			stay = true;
 			break;
 		}
