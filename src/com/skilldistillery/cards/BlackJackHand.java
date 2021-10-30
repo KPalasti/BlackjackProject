@@ -25,7 +25,6 @@ public class BlackJackHand extends Hand {
 		}
 		if (value >= 22) {
 			System.out.println("BUST");
-			System.out.println();
 			return true;
 		}
 		return false;
